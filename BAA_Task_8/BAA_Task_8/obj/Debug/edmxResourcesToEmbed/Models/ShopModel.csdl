@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Shop_BAAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Goods" Relationship="Self.Fk_Good" FromRole="Category" ToRole="Good" />
+  </EntityType>
+  <EntityType Name="Good">
+    <Key>
+      <PropertyRef Name="GoodId" />
+    </Key>
+    <Property Name="GoodId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GoodName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Price" Type="Double" Nullable="false" />
+    <Property Name="Picture" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descriptions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CountGood" Type="Int32" Nullable="false" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.Fk_Good" FromRole="Good" ToRole="Category" />
+    <NavigationProperty Name="Sells" Relationship="Self.FK_Sell_Good" FromRole="Good" ToRole="Sell" />
+  </EntityType>
+  <EntityType Name="Sell">
+    <Key>
+      <PropertyRef Name="SellId" />
+    </Key>
+    <Property Name="SellId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GoodId" Type="Int32" Nullable="false" />
+    <Property Name="DateSell" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SellCount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Good" Relationship="Self.FK_Sell_Good" FromRole="Sell" ToRole="Good" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Passwords" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Roles" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="Fk_Good">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Good" Type="Self.Good" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Good">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sell_Good">
+    <End Role="Good" Type="Self.Good" Multiplicity="1" />
+    <End Role="Sell" Type="Self.Sell" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Good">
+        <PropertyRef Name="GoodId" />
+      </Principal>
+      <Dependent Role="Sell">
+        <PropertyRef Name="GoodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Shop_BAAEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categories" EntityType="Self.Category" />
+    <EntitySet Name="Goods" EntityType="Self.Good" />
+    <EntitySet Name="Sells" EntityType="Self.Sell" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="Fk_Good" Association="Self.Fk_Good">
+      <End Role="Category" EntitySet="Categories" />
+      <End Role="Good" EntitySet="Goods" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sell_Good" Association="Self.FK_Sell_Good">
+      <End Role="Good" EntitySet="Goods" />
+      <End Role="Sell" EntitySet="Sells" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

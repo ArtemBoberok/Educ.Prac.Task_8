@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Shop_BAAModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Good">
+    <Key>
+      <PropertyRef Name="GoodId" />
+    </Key>
+    <Property Name="GoodId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GoodName" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Price" Type="float" Nullable="false" />
+    <Property Name="Picture" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descriptions" Type="nvarchar" MaxLength="255" />
+    <Property Name="CountGood" Type="int" Nullable="false" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sell">
+    <Key>
+      <PropertyRef Name="SellId" />
+    </Key>
+    <Property Name="SellId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GoodId" Type="int" Nullable="false" />
+    <Property Name="DateSell" Type="datetime" Nullable="false" />
+    <Property Name="SellCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Passwords" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Roles" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="Fk_Good">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Good" Type="Self.Good" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Good">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sell_Good">
+    <End Role="Good" Type="Self.Good" Multiplicity="1" />
+    <End Role="Sell" Type="Self.Sell" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Good">
+        <PropertyRef Name="GoodId" />
+      </Principal>
+      <Dependent Role="Sell">
+        <PropertyRef Name="GoodId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище Shop_BAAModelContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Good" EntityType="Self.Good" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sell" EntityType="Self.Sell" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="Fk_Good" Association="Self.Fk_Good">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Good" EntitySet="Good" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sell_Good" Association="Self.FK_Sell_Good">
+      <End Role="Good" EntitySet="Good" />
+      <End Role="Sell" EntitySet="Sell" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

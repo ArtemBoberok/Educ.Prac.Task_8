@@ -1,0 +1,38 @@
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.AssemblyReference.cache
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.SuggestedBindingRedirects.cache
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.g.resources
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\BAA_Task_8.exe.config
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\BAA_Task_8.exe
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\BAA_Task_8.pdb
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.dll
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.xml
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.AssemblyReference.cache
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.SuggestedBindingRedirects.cache
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.g.resources
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.fmLogin.resources
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.Properties.Resources.resources
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.GenerateResource.cache
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.CoreCompileInputs.cache
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.CopyComplete
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.exe
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.pdb
+C:\Users\177-22\Desktop\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.Forms.fmMainWindow.resources
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\BAA_Task_8.exe.config
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\BAA_Task_8.exe
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\BAA_Task_8.pdb
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.dll
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.SqlServer.dll
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.xml
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\EntityFramework.SqlServer.xml
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\bin\Debug\ru\EntityFramework.resources.dll
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.fmLogin.resources
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.Forms.fmMainWindow.resources
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.Properties.Resources.resources
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.GenerateResource.cache
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.CoreCompileInputs.cache
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.csproj.CopyComplete
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.exe
+X:\УП.01 Разр. прог. модулей\Task_8\BAA_Task_8\BAA_Task_8\obj\Debug\BAA_Task_8.pdb
